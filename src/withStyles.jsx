@@ -13,7 +13,7 @@ import ThemedStyleSheet from './ThemedStyleSheet';
 export const css = ThemedStyleSheet.resolveLTR;
 export const withStylesPropTypes = {
   styles: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
-  theme: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  // theme: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
   css: PropTypes.func.isRequired,
 };
 
@@ -42,7 +42,7 @@ export function withStyles(
   styleFn,
   {
     stylesPropName = 'styles',
-    themePropName = 'theme',
+    // themePropName = 'theme',
     cssPropName = 'css',
     flushBefore = false,
     pureComponent = false,
@@ -185,7 +185,7 @@ export function withStyles(
           <WrappedComponent
             {...this.props}
             {...{
-              [themePropName]: ThemedStyleSheet.get(),
+              // [themePropName]: ThemedStyleSheet.get(),
               [stylesPropName]: styleDef(),
               [cssPropName]: resolveMethod,
             }}
